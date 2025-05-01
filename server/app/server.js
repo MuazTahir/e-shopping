@@ -25,6 +25,11 @@ const app = express()
 
 const PORT = process.env.PORT || 6000
 
+app.get('/api/ping', (req, res) => {
+    res.send('pong from vercel');
+});
+
+
 app.use(
     cors(
         {
