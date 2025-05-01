@@ -52,4 +52,5 @@ app.use('/api', usersRouter)
 app.use('/api', orderReducer)
 
 
-app.listen(PORT, () => console.log(`Server is now running on PORT ${PORT}`))
+// app.listen(PORT, () => console.log(`Server is now running on PORT ${PORT}`))
+module.exports = app;
