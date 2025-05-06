@@ -3,6 +3,7 @@ import Header from "./components/common/Header";
 import HeroSection from "./components/common/hero-section";
 import Posters from "./components/common/posters/poster";
 import ApiFetch from "./components/apiData/apiFetch";
+import AdminProductsShow from "./components/shoppingPanel/adminProductsshow";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Posters />
       <HeroSection />
+      <AdminProductsShow />
       <ApiFetch />
     </div>
   );

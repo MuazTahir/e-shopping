@@ -12,7 +12,7 @@ const productRouter = require('./routes/apiData/api-routes')
 const stripeRouter = require('./routes/striperoute/stripe-router')
 const usersRouter = require('./routes/Users/users-routes')
 const orderReducer = require('./routes/Order/orders-route')
-
+const adminProductRoute = require('./routes/adminProduct/adminProduct-route')
 
 
 
@@ -51,11 +51,12 @@ app.use('/api/webhook', express.raw({ type: 'application/json' }));
 app.use(express.json())
 
 app.use('/api/auth', authRouter)
+app.use('/api/admin', adminProductRoute)
 app.use('/api', productRouter)
 app.use('/api', stripeRouter)
 app.use('/api', usersRouter)
 app.use('/api', orderReducer)
 
 
-// app.listen(PORT, () => console.log(`Server is now running on PORT ${PORT}`))
-module.exports = app;
+app.listen(PORT, () => console.log(`Server is now running on PORT ${PORT}`))
+// module.exports = app;

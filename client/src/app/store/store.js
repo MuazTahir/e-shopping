@@ -6,6 +6,8 @@ import cartReducer from './cart-Slice'
 import userReducer from './user-slice'
 import analyticalReducer from './analyticla-slice'
 import orderReducer from './order-slice'
+import adminProductsReducer from './admin-Product-slice'
+import shopProductsReducer from './shopProductSlice'
 
 const store = configureStore({
     reducer: {
@@ -14,7 +16,9 @@ const store = configureStore({
         cart: cartReducer,
         user: userReducer,
         analytical: analyticalReducer,
-        order: orderReducer
+        order: orderReducer,
+        adminProducts: adminProductsReducer,
+        shopProducts: shopProductsReducer,
     },
 })
 

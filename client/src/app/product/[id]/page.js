@@ -25,7 +25,7 @@ async function getProduct(id) {
 
 export default async function ProductDetails({ params }) {
     const { id } = params
-    console.log('the id is :', id);
+    // console.log('the id is :', id);
     const product = await getProduct(id);
 
 

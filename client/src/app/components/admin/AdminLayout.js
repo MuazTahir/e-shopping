@@ -4,6 +4,7 @@ import AdminSideBar from './AdminSIdebar'
 import AdminHeader from './AdminHeader'
 import CheckAuth from '../auth/Check-auth'
 import { useSelector } from 'react-redux'
+import AdminsSidebar from './sideBar'
 
 const AdminLayout = ({ children }) => {
 
@@ -13,9 +14,10 @@ const AdminLayout = ({ children }) => {
   return (
     <CheckAuth isAuthenticated={isAuthenticated} user={user} isLoading={isLoading}>
 
-      <div className='min-h-screen w-full flex bg-white text-black'>
+      <div className='min-h-screen w-full flex'>
         {/* sidebarAdmin */}
-        <AdminSideBar />
+        {/* <AdminSideBar /> */}
+        <AdminsSidebar />
         <div className='flex flex-1 flex-col'>
           {/* headerAdmin */}
           <AdminHeader />
